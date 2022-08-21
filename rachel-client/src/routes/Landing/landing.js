@@ -9,7 +9,6 @@ function Landing() {
             <h1>Symbol</h1>
         </div>
         <div className="Navbar">
-            <h1>Navbar</h1>
             <nav>
               <Link to="/about">About</Link>
               <Link to="/contact">Contact</Link>

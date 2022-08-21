@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
-import Landing from './routes/landing'
-import About from './routes/about'
-import Contact from './routes/contact'
+import Landing from './routes/Landing/landing'
+import About from './routes/About/about'
+import Contact from './routes/Contact/contact'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
