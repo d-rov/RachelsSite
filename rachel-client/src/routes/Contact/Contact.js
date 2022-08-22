@@ -1,15 +1,19 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
+import './Contact.css'
+
 // TODO:
 // need to create JSON to send to POST /contact/send endpoint
 // needs name, email, message fields
 
-// TODO:
-// need to create a form
-
 function Contact() {
   const [data, setData] = useState(null)
+
+  const [name, setName] = useState(null)
+  const [date, setDate] = useState(null)
+  const [email, setEmail] = useState(null)
+  const [message, setMessage] = useState(null)
 
   useEffect(() => {
     fetch("/contact")
@@ -19,8 +23,37 @@ function Contact() {
 
   return (
     <div className="Contact">
-      <h1>Hello World! This is the contact page.</h1>
       <p>{!data ? "Loading..." : data}</p>
+      <form className="contact__form">
+        {/* <label></label> */}
+        <input
+          className="name__date"
+          name="name"
+          type="text"
+          value={name}
+          onChange={e => setName(e.target.value)}
+        />
+        <input
+          className="name__date"
+          name="date"
+          type="date"
+          value={date}
+          onChange={e => setDate(e.target.value)}
+        />
+        <input
+          name="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+        />
+        <input
+          name="message"
+          value={message}
+          onChange={e => setMessage(e.target.value)}
+        />
+        <input
+          type="submit"
+        />
+      </form>
       <Link className="home__link" to="/">Home</Link>
     </div>
   );
