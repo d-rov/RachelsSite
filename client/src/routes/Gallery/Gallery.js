@@ -12,6 +12,7 @@ import sloth from '../About/avatar_sample.png'
 import './Gallery.css'
 
 function Gallery() {
+  let thought = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam pellentesque nec nam aliquam sem et. Elit ullamcorper dignissim cras tincidunt lobortis feugiat. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed. Quam lacus suspendisse faucibus interdum posuere. Aliquet sagittis id consectetur purus ut. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Et molestie ac feugiat sed lectus vestibulum mattis. Interdum varius sit amet mattis vulputate enim. Sem integer vitae justo eget."
   const [data, setData] = useState(null)
 
   useEffect(() => {
@@ -25,10 +26,10 @@ function Gallery() {
       <p>{!data ? "Loading..." : data}</p>
       <Link className="home__link" to="/">Home</Link>
       <div className="artcase">
-        <Artwork image={ohm} text={"this is image 1"} title={"image 1"} />
-        <Artwork image={snail} text={"this is image 2"} title={"image 2"} />
-        <Artwork image={xbar} text={"this is image 3"} title={"image 3"} />
-        <Artwork image={sloth} text={"this is image 4"} title={"image 4"} />
+        <Artwork image={ohm} text={"this is image 1"} title={"image 1"} thoughts={thought} />
+        <Artwork image={snail} text={"this is image 2"} title={"image 2"} thoughts={thought} />
+        <Artwork image={xbar} text={"this is image 3"} title={"image 3"} thoughts={thought} />
+        <Artwork image={sloth} text={"this is image 4"} title={"image 4"} thoughts={thought} />
       </div>
       {/* <Link className="home__link" to="/">Home</Link> */}
     </div>
