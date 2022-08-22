@@ -3,7 +3,7 @@ const router = express.Router()
 
 router.get("/", (req, res) => {
     res.json({
-        message: "This is Rachel's about page."
+        message: "This is the gallery page."
     })
 })
 
