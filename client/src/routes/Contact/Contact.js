@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import './Contact.css'
@@ -8,53 +8,44 @@ import './Contact.css'
 // needs name, email, message fields
 
 function Contact() {
-  const [data, setData] = useState(null)
+  // const [data, setData] = useState(null)
 
   const [name, setName] = useState('')
-  const [date, setDate] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-  useEffect(() => {
-    fetch("/contact")
-      .then((res) => res.json())
-      .then((data) => setData(data.message))
-  })
+  // useEffect(() => {
+  //   fetch("/contact")
+  //     .then((res) => res.json())
+  //     .then((data) => setData(data.message))
+  // })
 
   return (
     <div className="Contact">
-      <p>{!data ? "Loading..." : data}</p>
+      <h1>Contact</h1>
+      {/* <p>{!data ? "Loading..." : data}</p> */}
       <form className="contact__form">
-        {/* <label></label> */}
+        {/* <label>Name:</label> */}
         <input
-          className="name__date"
+          className="small__input"
           name="name"
           type="text"
           value={name}
           onChange={e => setName(e.target.value)}
         />
         <input
-          className="name__date"
-          name="date"
-          type="date"
-          value={date}
-          onChange={e => setDate(e.target.value)}
-        />
-        <input
+          className="small__input"
           name="email"
           value={email}
           onChange={e => setEmail(e.target.value)}
         />
-        <input
+        <textarea
           name="message"
           value={message}
           onChange={e => setMessage(e.target.value)}
         />
         <input
           type="submit"
-          onSubmit={e => {
-            console.log(date)
-          }}
         />
       </form>
       <Link className="home__link" to="/">Home</Link>
