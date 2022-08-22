@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function Gallery() {
   const [data, setData] = useState(null)
@@ -13,6 +14,7 @@ function Gallery() {
     <div className="Contact">
       <h1>Hello World! This is the gallery page.</h1>
       <p>{!data ? "Loading..." : data}</p>
+      <Link className="home__link" to="/">Home</Link>
     </div>
   );
 }
