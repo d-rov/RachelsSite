@@ -8,8 +8,16 @@
     height: auto;
 }
 
-.thoughts {
-    width: 75%;
+.title {
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
+    text-align: left;
+}
+
+.thoughts {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }

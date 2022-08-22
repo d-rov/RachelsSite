@@ -4,7 +4,7 @@ function Artwork(props) {
     return (
       <div className="Artwork">
         <img className="artpiece" src={props.image} alt={props.text} />
-        <h1 className="title">{props.title}</h1>
+        <h2 className="title">{props.title}</h2>
         <p className="thoughts">{props.thoughts}</p>
       </div>
     );
