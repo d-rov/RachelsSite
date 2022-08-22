@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-import Card from '../../components/Card'
+import Artwork from '../../components/Artwork'
+// import Card from '../../components/Card'
 
 import ohm from '../Landing/ohm_sample_symbol.jpg'
 import snail from '../Landing/snail.jpg'
@@ -22,13 +23,14 @@ function Gallery() {
   return (
     <div className="Gallery">
       <p>{!data ? "Loading..." : data}</p>
-      <div className="artcase">
-        <Card image={ohm} text={"this is image 1"} />
-        <Card image={snail} text={"this is image 2"} />
-        <Card image={xbar} text={"this is image 3"} />
-        <Card image={sloth} text={"this is image 4"} />
-      </div>
       <Link className="home__link" to="/">Home</Link>
+      <div className="artcase">
+        <Artwork image={ohm} text={"this is image 1"} title={"image 1"} />
+        <Artwork image={snail} text={"this is image 2"} title={"image 2"} />
+        <Artwork image={xbar} text={"this is image 3"} title={"image 3"} />
+        <Artwork image={sloth} text={"this is image 4"} title={"image 4"} />
+      </div>
+      {/* <Link className="home__link" to="/">Home</Link> */}
     </div>
   );
 }

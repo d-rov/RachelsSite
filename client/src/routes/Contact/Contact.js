@@ -24,6 +24,7 @@ function Contact() {
     <div className="Contact">
       <h1>Contact</h1>
       {/* <p>{!data ? "Loading..." : data}</p> */}
+      <Link className="home__link" to="/">Home</Link>
       <form className="contact__form">
         {/* <label>Name:</label> */}
         <input
@@ -48,7 +49,7 @@ function Contact() {
           type="submit"
         />
       </form>
-      <Link className="home__link" to="/">Home</Link>
+      {/* <Link className="home__link" to="/">Home</Link> */}
     </div>
   );
 }
