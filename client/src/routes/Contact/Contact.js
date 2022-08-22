@@ -10,10 +10,10 @@ import './Contact.css'
 function Contact() {
   const [data, setData] = useState(null)
 
-  const [name, setName] = useState(null)
-  const [date, setDate] = useState(null)
-  const [email, setEmail] = useState(null)
-  const [message, setMessage] = useState(null)
+  const [name, setName] = useState('')
+  const [date, setDate] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
 
   useEffect(() => {
     fetch("/contact")
@@ -52,6 +52,9 @@ function Contact() {
         />
         <input
           type="submit"
+          onSubmit={e => {
+            console.log(date)
+          }}
         />
       </form>
       <Link className="home__link" to="/">Home</Link>
