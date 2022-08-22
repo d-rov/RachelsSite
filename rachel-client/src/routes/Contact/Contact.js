@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
+// TODO:
+// need to create JSON to send to POST /contact/send endpoint
+// needs name, email, message fields
+
+// TODO:
+// need to create a form
+
 function Contact() {
   const [data, setData] = useState(null)
 
