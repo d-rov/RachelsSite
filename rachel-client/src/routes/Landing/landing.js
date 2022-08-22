@@ -1,21 +1,28 @@
 import { Link } from 'react-router-dom'
 
+import snail from './snail.jpg'
+import symbol from './ohm_sample_symbol.jpg'
+import Card from '../../components/Card'
+
 import './landing.css'
 
 function Landing() {
     return (
       <div className="Landing">
         <div className="Symbol">
-            <h1>Symbol</h1>
+          <img src={symbol} alt="temporary symbol" />
         </div>
         <div className="Navbar">
             <nav>
-              <Link to="/about">About</Link>
-              <Link to="/contact">Contact</Link>
+              <Link id="links" to="/about">About</Link>
+              <Link id="links" to="/gallery">Gallery</Link>
+              <Link id="links" to="/contact">Contact</Link>
             </nav>
         </div>
         <div className="Showcase">
-            <h1>Hello World!</h1>
+            {/* <h1>Hello World!</h1> */}
+            {/* <img src={snail} alt="Surreal snail painting." /> */}
+            <Card image={snail} text="Surreal snail painting" />
         </div>
       </div>
     );
