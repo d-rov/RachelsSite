@@ -2,10 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 
-import Landing from './routes/Landing/landing'
-import About from './routes/About/about'
-import Gallery from './routes/Gallery/gallery'
-import Contact from './routes/Contact/contact'
+import Landing from './routes/Landing/Landing'
+import About from './routes/About/About'
+import Gallery from './routes/Gallery/Gallery'
+import Contact from './routes/Contact/Contact'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-function Contact() {
+function Gallery() {
   const [data, setData] = useState(null)
 
   useEffect(() => {
@@ -17,5 +17,5 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Gallery;
   

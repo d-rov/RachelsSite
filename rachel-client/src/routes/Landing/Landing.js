@@ -4,7 +4,7 @@ import snail from './snail.jpg'
 import symbol from './ohm_sample_symbol.jpg'
 import Card from '../../components/Card'
 
-import './landing.css'
+import './Landing.css'
 
 function Landing() {
     return (

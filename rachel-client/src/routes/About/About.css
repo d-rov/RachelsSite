@@ -1,0 +1,15 @@
+.About {
+    padding: 25px;
+    text-align: center;
+}
+
+#pic {
+    padding: 25px;
+    border-radius: 50%;
+}
+
+#content {
+    padding-left: 30%;
+    padding-right: 30%;
+    text-align: left;
+}
