@@ -12,9 +12,6 @@ router.get("/", (req, res) => {
                 message: data
             })
         })
-    // res.json({
-    //     message: "This is the gallery page. This endpoint will get all images"
-    // })
 })
 
 router.get("/getImageById", (req, res) => {
