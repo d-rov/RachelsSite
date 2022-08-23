@@ -18,12 +18,12 @@ function Gallery() {
   useEffect(() => {
     fetch("/gallery")
       .then((res) => res.json())
-      .then((data) => setData(data.message))
+      .then((data) => setData(data.message[0]))
   })
 
   return (
     <div className="Gallery">
-      <p>{!data ? "Loading..." : data}</p>
+      <p>{!data ? "Loading..." : data.name}</p>
       <Link className="home__link" to="/">Home</Link>
       <div className="artcase">
         <Artwork image={ohm} text={"this is image 1"} title={"image 1"} thoughts={thought} />

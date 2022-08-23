@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
         .then(data => {
             console.log('DATA:', data)
             res.json({
-                json: data
+                message: data
             })
         })
     // res.json({
