@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 
+require('dotenv').config()
+
 // const about = require('./routes/about')
 const gallery = require('./routes/gallery')
 const contact = require('./routes/contact')

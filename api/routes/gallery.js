@@ -1,10 +1,20 @@
 const express = require('express')
 const router = express.Router()
 
+const pgp = require('pg-promise')()
+const db = pgp(process.env.DB_URL)
+
 router.get("/", (req, res) => {
-    res.json({
-        message: "This is the gallery page. This endpoint will get all images"
-    })
+    db.any('SELECT * FROM artworks')
+        .then(data => {
+            console.log('DATA:', data)
+            res.json({
+                json: data
+            })
+        })
+    // res.json({
+    //     message: "This is the gallery page. This endpoint will get all images"
+    // })
 })
 
 router.get("/getImageById", (req, res) => {
