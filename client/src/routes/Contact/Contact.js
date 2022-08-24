@@ -51,7 +51,7 @@ function Contact() {
       </form>
       {/* <Link className="home__link" to="/">Home</Link> */}
     </div>
-  );
+  )
 }
 
 export default Contact;

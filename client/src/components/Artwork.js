@@ -8,7 +8,7 @@ function Artwork(props) {
         <h2 className="title">{props.name}</h2>
         <p className="thoughts">{props.description}</p>
       </div>
-    );
+    )
   }
   
   export default Artwork;

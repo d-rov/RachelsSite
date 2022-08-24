@@ -31,7 +31,7 @@ function Gallery() {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 export default Gallery;

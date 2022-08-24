@@ -20,7 +20,7 @@ function About() {
       </p>
       <img id="pic" src={headshot} alt="Rachel Headshot" />
     </div>
-  );
+  )
 }
 
 export default About;
