@@ -5,7 +5,7 @@ import Artwork from '../../components/Artwork'
 // import Card from '../../components/Card'
 
 // import ohm from '../Landing/ohm_sample_symbol.jpg'
-import snail from '../Landing/snail.jpg'
+// import snail from '../Landing/snail.jpg'
 // import xbar from '../Landing/x_bar_sample_symbol.png'
 // import sloth from '../About/avatar_sample.png'
 
@@ -28,7 +28,7 @@ function Gallery() {
       <div className="artcase">
         {data.map((entry) => (
           //
-          <Artwork key={entry.id} image={snail} {...entry} />
+          <Artwork key={entry.id} {...entry} />
           // <h1 key={entry.name} >{!entry ? "Loading..." : entry.name}</h1>
         ))}
         {/* <Artwork image={ohm} text={"this is image 1"} title={"image 1"} thoughts={thought} />
