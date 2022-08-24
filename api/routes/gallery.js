@@ -17,7 +17,8 @@ router.get("/", (req, res) => {
         })
 })
 
-router.get("/getImageById", (req, res) => {
+router.get("/getImageByName", (req, res) => {
+    db.any('SELECT * FROM artworks WHERE name = $1', [req.body.name])
     res.json({
         message: "This endpoint gets images by ID."
     })
