@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import Artwork from '../../components/Artwork'
-// import Card from '../../components/Card'
 
 // import ohm from '../Landing/ohm_sample_symbol.jpg'
 // import snail from '../Landing/snail.jpg'
@@ -23,7 +22,6 @@ function Gallery() {
 
   return (
     <div className="Gallery">
-      {/* <p>{!data ? "Loading..." : data.name}</p> */}
       <Link className="home__link" to="/">Home</Link>
       <div className="artcase">
         {data.map((entry) => (
@@ -31,12 +29,7 @@ function Gallery() {
           <Artwork key={entry.id} {...entry} />
           // <h1 key={entry.name} >{!entry ? "Loading..." : entry.name}</h1>
         ))}
-        {/* <Artwork image={ohm} text={"this is image 1"} title={"image 1"} thoughts={thought} />
-        <Artwork image={snail} text={"this is image 2"} title={"image 2"} thoughts={thought} />
-        <Artwork image={xbar} text={"this is image 3"} title={"image 3"} thoughts={thought} />
-        <Artwork image={sloth} text={"this is image 4"} title={"image 4"} thoughts={thought} /> */}
       </div>
-      {/* <Link className="home__link" to="/">Home</Link> */}
     </div>
   );
 }

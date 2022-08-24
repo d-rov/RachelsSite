@@ -8,7 +8,7 @@ function About() {
 
   return (
     <div className="About">
-      <img id="pic" src={headshot} alt="Rachel Headshot" />
+      <Link className="home__link" to="/">Home</Link>
       <p className="content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quam pellentesque nec nam aliquam sem et. Elit ullamcorper dignissim cras tincidunt lobortis feugiat. Tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed. Quam lacus suspendisse faucibus interdum posuere. Aliquet sagittis id consectetur purus ut. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Et molestie ac feugiat sed lectus vestibulum mattis. Interdum varius sit amet mattis vulputate enim. Sem integer vitae justo eget.
       </p>
@@ -18,7 +18,7 @@ function About() {
       <p className="content">
       Sollicitudin aliquam ultrices sagittis orci. Maecenas sed enim ut sem. Gravida in fermentum et sollicitudin ac orci phasellus egestas. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Auctor eu augue ut lectus arcu bibendum. Magna fermentum iaculis eu non diam phasellus. Habitant morbi tristique senectus et. Morbi leo urna molestie at elementum eu. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Massa massa ultricies mi quis hendrerit dolor magna eget. Tempor orci eu lobortis elementum. Neque sodales ut etiam sit amet. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Arcu risus quis varius quam quisque. Diam in arcu cursus euismod quis.
       </p>
-      <Link className="home__link" to="/">Home</Link>
+      <img id="pic" src={headshot} alt="Rachel Headshot" />
     </div>
   );
 }
