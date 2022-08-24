@@ -17,15 +17,17 @@ router.get("/", (req, res) => {
         })
 })
 
-router.get("/getImageByName", (req, res) => {
-    db.any('SELECT * FROM artworks WHERE name = $1', [req.body.name])
-    res.json({
-        message: "This endpoint gets images by ID."
-    })
+router.get("/imageName", (req, res) => {
+    db.any('SELECT * FROM artworks WHERE name = $1', [req.query.name])
+        .then(data => {
+            res.json({
+                message: data
+            })
+        })
 })
 
-router.get("/getImagesByMedium", (req, res) => {
-    db.any('SELECT * FROM artworks WHERE medium = $1', [req.body.medium])
+router.get("/imageMedium", (req, res) => {
+    db.any('SELECT * FROM artworks WHERE medium = $1', [req.query.medium])
         .then(data => {
             // console.log('DATA:', data)
             res.json({
@@ -37,7 +39,7 @@ router.get("/getImagesByMedium", (req, res) => {
 // POST endpoints
 router.post("/addArtwork", (req, res) => {
     db.none('INSERT INTO artworks(name, url, description, medium) VALUES($1, $2, $3, $4)', [req.body.name, req.body.url, req.body.description, req.body.medium])
-        .then(data => {
+        .then(() => {
             // console.log('DATA:', data)
             res.json({
                 message: "Artwork inserted into database."
