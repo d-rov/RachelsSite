@@ -1,10 +1,8 @@
 const express = require('express')
 const router = express.Router()
+const db = require('./db')
 
 router.use(express.json())
-
-const pgp = require('pg-promise')()
-const db = pgp(process.env.DB_URL)
 
 // POST endpoints
 router.post("/addArtwork", (req, res) => {
